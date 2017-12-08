@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {ProductService} from "./services/product.service";
 import {HttpModule} from "@angular/http";
+import {ClassComponent} from "./list/class/class.component";
+import {EventsService} from "./services/events.service";
 
 
 //设置路由配置
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     ListComponent,
     DetailComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ClassComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [ProductService],
+  providers: [ProductService,EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

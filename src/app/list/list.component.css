@@ -1,0 +1,3 @@
+.pro-list { overflow: hidden}
+.pro-item { float: left; width: 50%;}
+.pro-item  img { width: 200px; height: 200px;}
