@@ -1,0 +1,13 @@
+
+<div>
+  <app-header [tit]="'列表'"></app-header>
+  <div>
+    <ul>
+      <li *ngFor="let data of listData"  [routerLink]="'/detail/'+data.pid">
+        {{data.p_name}}
+      </li>
+
+    </ul>
+  </div>
+  <app-footer></app-footer>
+</div>
