@@ -1,6 +1,6 @@
 
 <div>
-  <app-header [tit]="'列表'"></app-header>
+  <app-header [tit]="title"></app-header>
   <div>
     <ul>
       <li *ngFor="let data of listData"  [routerLink]="'/detail/'+data.pid">
@@ -9,5 +9,6 @@
 
     </ul>
   </div>
-  <app-footer></app-footer>
+  <app-footer (changeTit)="changeTit($event)"></app-footer>
 </div>
+<!--中间人模式-->

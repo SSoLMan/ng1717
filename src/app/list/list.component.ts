@@ -7,6 +7,7 @@ import {ProductService} from "../services/product.service";
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  title:string="商品列表";
   listData:Array<Object> = [];
   constructor(private proService:ProductService) { }
 
@@ -17,6 +18,9 @@ export class ListComponent implements OnInit {
       console.log(res)
       this.listData = res.json().listData
     })
+  }
+  changeTit(tit:string){
+    this.title = tit
   }
 
 }
