@@ -2,9 +2,11 @@
 <div>
   <app-header [tit]="title"></app-header>
   <div>
-    <ul>
-      <li *ngFor="let data of listData"  [routerLink]="'/detail/'+data.pid">
-        {{data.p_name}}
+    <app-class   [classData]="classData"></app-class>
+    <ul class="pro-list">
+      <li [ngClass]="['pro-item']" *ngFor="let data of listData"  [routerLink]="'/detail/'+data.pid">
+        <img [src]="data.img_url" alt="">
+       <p> {{data.p_name}}</p>
       </li>
 
     </ul>
